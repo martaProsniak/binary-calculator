@@ -27,12 +27,16 @@ public class CalculatorMain {
 
         if (!inputScanner.hasNextInt()) {
             System.out.println("Wrong vale - choose an integer!");
+        }
+        int number = inputScanner.nextInt();
+
+        if (number < 0) {
+            System.out.println("Choose number higher than 0!");
         } else {
-            int number = inputScanner.nextInt();
             //Create new int array
             List<Integer> binaryNumber = new ArrayList<>();
             //Convert number into binary and store result in a list
-            while (number > 0){
+            while (number > 0) {
                 int result = number % 2;
                 binaryNumber.add(result);
                 number /= 2;
@@ -43,3 +47,4 @@ public class CalculatorMain {
         }
     }
 }
+
